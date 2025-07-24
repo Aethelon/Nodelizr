@@ -1,8 +1,27 @@
+@import "primeicons/primeicons.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&display=swap');
+
 :root {
+  // Color Variables
   --bg-color: #3D3737; //Dark Brown
   --text-color: #EFE6DE; //Cream Vanilla
+  --text-color-fixed: #EFE6DE; // Cream Vanilla Fixed
   --primary-color: #2D322D; //Dark Green
   --secondary-color: #3BAC53; //Green
+
+  // Font Variables
+  --font-family: 'Inter', sans-serif, Helvetica;
+
+  // Size Variables
+  --default-radius: 16px;
+}
+
+[data-theme="light"] {
+  --bg-color: #EFE6DE; // Cream Vanilla
+  --text-color: #3D3737; // Dark Brown
+  --primary-color: #2D322D; // Dark Green
+  --secondary-color: #3BAC53; // Green
+
 }
 
 * {
