@@ -1,0 +1,18 @@
+:root {
+  --bg-color: #3D3737; //Dark Brown
+  --text-color: #EFE6DE; //Cream Vanilla
+  --primary-color: #2D322D; //Dark Green
+  --secondary-color: #3BAC53; //Green
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+body {
+  background-color: var(--bg-color);
+  padding: 1em 2.5em !important;
+  color: var(--text-color);
+}
