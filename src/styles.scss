@@ -19,9 +19,8 @@
 [data-theme="light"] {
   --bg-color: #EFE6DE; // Cream Vanilla
   --text-color: #3D3737; // Dark Brown
-  --primary-color: #2D322D; // Dark Green
+  --primary-color: #FFFFFF; // White
   --secondary-color: #3BAC53; // Green
-
 }
 
 * {
@@ -32,6 +31,7 @@
 
 body {
   background-color: var(--bg-color);
-  padding: 1em 2.5em !important;
+  padding: 1em 2em !important;
+  font-family: var(--font-family);
   color: var(--text-color);
 }
