@@ -1,48 +1,31 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   standalone: true,
   selector: 'app-header',
   imports: [CommonModule],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  isLight = false;
 
- isLight = false;
-
-  constructor(private renderer: Renderer2) {}
+  constructor() {}
 
   ngOnInit(): void {
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-      this.enableLightTheme();
-    }
+    this.isLight = savedTheme === 'light';
+    this.updateBodyTheme();
   }
 
   toggleTheme(): void {
     this.isLight = !this.isLight;
-    if (this.isLight) {
-      this.enableLightTheme();
-      localStorage.setItem('theme', 'light');
-    } else {
-      this.disableLightTheme();
-      localStorage.setItem('theme', 'dark');
-    }
+    localStorage.setItem('theme', this.isLight ? 'light' : 'dark');
+    this.updateBodyTheme();
   }
 
-  enableLightTheme(): void {
-    this.renderer.setAttribute(document.body, 'data-theme', 'light');
-    const icon = document.querySelector('#themeToggle i');
-    icon?.classList.remove('pi-sun');
-    icon?.classList.add('pi-moon');
-  }
-
-  disableLightTheme(): void {
-    this.renderer.removeAttribute(document.body, 'data-theme');
-    const icon = document.querySelector('#themeToggle i');
-    icon?.classList.remove('pi-moon');
-    icon?.classList.add('pi-sun');
+  updateBodyTheme(): void {
+    document.body.setAttribute('data-theme', this.isLight ? 'light' : 'dark');
   }
 }
