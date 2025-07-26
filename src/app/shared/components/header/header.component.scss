@@ -18,12 +18,13 @@
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 42px;
 }
 
 .logo {
   width: 82px;
   height: 82px;
+  margin-left: 10px;
 }
 
 .app-title {
@@ -32,6 +33,7 @@
   line-height: 100%;
   font-weight: 400;
   color: var(--secondary-color);
+  margin-left: -15px;
 }
 
 .app-title .highlight {
@@ -40,14 +42,14 @@
 
 .header-actions {
   display: flex;
-  gap: 25px;
-  padding-right:  1%;
+  gap: 20px;
+  padding-right: 1%;
 }
 
 .header-btn {
   width: 70px;
   height: 70px;
-  background-color: var(--primary-color);
+  background-color: var(--color-buttons);
   border: none;
   border-radius: var(--default-radius);
   color: var(--text-color);
@@ -60,7 +62,9 @@
   border-color: black;
   border-style: solid;
   border-width: 1px;
-    box-shadow: 9px 5px 10px 1px rgba(34, 33, 33, 0.6);
+  box-shadow: 6px 3px 8px 1px rgba(34, 33, 33, 0.6);
+  text-decoration: none;
+
 }
 
 .github-btn {
@@ -88,5 +92,139 @@
   height: 0;
   margin: 0 auto;
   margin-top: 10px; 
-  border-top: 1px solid var(--text-color-fixed);
+  border-top: 1px solid var(--text-color);
+}
+
+@media (max-width: 992px) {
+  .app-header {
+    height: auto;
+    padding: 15px 10px;
+  }
+
+  .logo-container {
+    gap: 15px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .app-title {
+    font-size: 48px;
+  }
+
+  .header-actions {
+    gap: 15px;
+    padding-right: 0.5%;
+  }
+
+  .header-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+    box-shadow: 6px 3px 8px 1px rgba(34, 33, 33, 0.6);
+  }
+
+  .github-btn {
+    width: 120px;
+    font-size: 20px;
+    padding: 0 0.8rem;
+  }
+
+  .pi-github {
+    font-size: 1.8rem;
+  }
+
+  .header-divider {
+    width: calc(100% - 10px);
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+  }
+
+  .header-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .app-title {
+    font-size: 40px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .header-actions {
+    flex-wrap: wrap; 
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .header-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    box-shadow: 4px 2px 6px 0px rgba(34, 33, 33, 0.6);
+  }
+
+  .github-btn {
+    width: 100px;
+    font-size: 18px;
+    padding: 0 0.5rem;
+  }
+
+  .pi-github {
+    font-size: 1.5rem;
+  }
+
+  .header-divider {
+    width: calc(100% - 10px);
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 32px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+
+  .header-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+  }
+
+  .github-btn {
+    width: 90px;
+    font-size: 16px;
+  }
+
+  .pi-github {
+    font-size: 1.2rem;
+  }
 }

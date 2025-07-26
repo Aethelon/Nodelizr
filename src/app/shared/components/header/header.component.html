@@ -5,15 +5,15 @@
     </div>
 
     <div class="header-actions">
-      <button class="header-btn github-btn">
+      <a href="https://github.com/Aethelon/Nodelizr-API.git" class="header-btn github-btn">
         <i class="pi pi-github"></i> 1.0.0
+      </a>
+      <button class="header-btn theme-btn" (click)="toggleTheme()">
+        <i class="pi" [ngClass]="isLight ? 'pi-moon' : 'pi-sun'"></i>
       </button>
-      <button class="header-btn theme-btn">
-        <i class="pi pi-sun"></i>
-      </button>
-      <button class="header-btn discussion-btn">
+      <a href="https://github.com/orgs/Aethelon/discussions" class="header-btn discussion-btn">
         <i class="pi pi-comments"></i>
-      </button>
+      </a>
     </div>
   </div>
   <div class="header-divider"></div> 
