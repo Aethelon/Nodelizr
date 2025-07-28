@@ -1,15 +1,21 @@
 .tree-wrapper {
   width: 100%;
-  max-width: 600px;
   margin: 0 auto;
 
-  .title {
+  summary.title {
+    cursor: pointer;
+    outline: none;
+    user-select: none;
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--text-color);
     margin-bottom: 1rem;
     letter-spacing: 0.01em;
+    transition: color 0.2s;
 
+    &::-webkit-details-marker {
+      display: none;
+    }
   }
 
   .custom-tree {
