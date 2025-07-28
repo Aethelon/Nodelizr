@@ -27,12 +27,12 @@
     .input-group {
       display: flex;
       width: 70%;
-      max-width: 600px;
+      max-width: 394px;
       border: 1.5px solid var(--text-color);
       border-radius: var(--default-radius);
       overflow: hidden;
 
-      @media (max-width: 800px) {
+      @media (max-width: 1000px) {
         width: 100%;
         max-width: none;
       }
