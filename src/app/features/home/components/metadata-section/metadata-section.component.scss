@@ -1,0 +1,62 @@
+.metadata-section {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+
+    span {
+      color: var(--secondary-color);
+    }
+  }
+
+  form {
+    width: 100%;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .input-group {
+      display: flex;
+      width: 70%;
+      max-width: 600px;
+      border: 1.5px solid var(--text-color);
+      border-radius: var(--default-radius);
+      overflow: hidden;
+
+      @media (max-width: 800px) {
+        width: 100%;
+        max-width: none;
+      }
+
+      .pi {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1.5px solid var(--text-color);
+        border-radius: var(--default-radius) 0 0 var(--default-radius);
+        font-size: 1.5rem;
+        padding: 0.8rem;
+        height: 100%;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border-radius: 0 var(--default-radius) var(--default-radius) 0;
+        background: transparent;
+      }
+    }
+  }
+}

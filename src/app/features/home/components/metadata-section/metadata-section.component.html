@@ -1,0 +1,40 @@
+<section class="metadata-section">
+  <h2 class="title">Create a new <span>Node.js</span> project</h2>
+  <form [formGroup]="filterForm">
+    <div class="form-group">
+      <p-inputgroup class="input-group">
+        <p-inputgroup-addon>
+          <i class="pi pi-file"></i>
+        </p-inputgroup-addon>
+        <input pInputText type="text" formControlName="description" placeholder="Name"
+        />
+      </p-inputgroup>
+
+      <p-input-group class="input-group">
+        <span pInputGroupAddon>
+          <i class="pi pi-tag"></i>
+        </span>
+        <input
+          pInputText
+          type="text"
+          formControlName="version"
+          placeholder="Version"
+        />
+      </p-input-group>
+
+      <p-input-group class="input-group">
+        <span pInputGroupAddon>
+          <i class="pi pi-user"></i>
+        </span>
+        <input
+          pInputText
+          type="text"
+          formControlName="author"
+          placeholder="Author"
+        />
+      </p-input-group>
+    </div>
+  </form>
+
+  <app-project-tree class="project-tree" />
+</section>
