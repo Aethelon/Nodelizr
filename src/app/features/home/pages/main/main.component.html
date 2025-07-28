@@ -1,4 +1,5 @@
+<p-toast position="top-center"></p-toast>
 <main>
-  <app-metadata-section class="section" [filterForm]="filterForm"/>
+  <app-metadata-section class="section" [filterForm]="filterForm" (generate)="onGenerate()" />
   <app-dependencies-section class="section" [filterForm]="filterForm"/>
 </main>

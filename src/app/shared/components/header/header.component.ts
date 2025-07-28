@@ -9,13 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  isLight = false;
+  isLight = true; 
 
   constructor() {}
 
   ngOnInit(): void {
     const savedTheme = localStorage.getItem('theme');
-    this.isLight = savedTheme === 'light';
+    this.isLight = savedTheme ? savedTheme === 'light' : true;
     this.updateBodyTheme();
   }
 
