@@ -1,3 +1,21 @@
-<p>
-  project-tree works!
-</p>
+<section class="tree-wrapper">
+  <h2 class="title">Project Structure</h2>
+  <ul class="custom-tree">
+    <ng-container *ngFor="let node of files">
+      <li>
+        <div class="tree-item">
+          <span [ngClass]="node.icon"></span>
+          {{ node.label }}
+        </div>
+        <ul *ngIf="node.children">
+          <li *ngFor="let child of node.children">
+            <div class="tree-item">
+              <span [ngClass]="child.icon"></span>
+              {{ child.label }}
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ng-container>
+  </ul>
+</section>
