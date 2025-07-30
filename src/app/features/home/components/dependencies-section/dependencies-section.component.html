@@ -1,3 +1,23 @@
-<p>
-  dependencies-section works!
-</p>
+<section class="dependencies-section">
+  <div class="header">
+    <h2>Dependencies</h2>
+  </div>
+
+  <div class="dependencies-list">
+    <ng-container *ngFor="let category of categories">
+      <h3>{{ category }}</h3>
+      <ul>
+        <li
+          *ngFor="let lib of grouped[category]"
+          (click)="toggle(lib)"
+          [class.selected]="isSelected(lib)"
+        >
+          <span class="lib-name">{{ lib.name }}</span>
+          <small>{{ lib.description }}</small>
+          <span class="version">{{ lib.version }}</span>
+          <i class="pi" [ngClass]="isSelected(lib) ? 'pi-check-circle' : 'pi-circle-off'"></i>
+        </li>
+      </ul>
+    </ng-container>
+  </div>
+</section>

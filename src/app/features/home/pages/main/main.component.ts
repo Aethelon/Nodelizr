@@ -42,35 +42,37 @@ export class MainComponent {
   onGenerate() {
     if (this.filterForm.invalid) {
       this.messageService.add({
-        severity: 'warn',
-        summary: 'Formulário inválido',
-        detail: 'Por favor, preencha todos os campos obrigatórios.',
+      severity: 'warn',
+      summary: 'Invalid Form',
+      detail: 'Please fill all required fields.',
       });
       return;
     }
 
     this.generateService.generateProject(this.filterForm.value).subscribe({
       next: (blob) => {
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `project.zip`;
-        a.click();
-        window.URL.revokeObjectURL(url);
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = this.filterForm.value.description ?
+        `${this.filterForm.value.description.replace(/\s+/g, '-')}.zip` :
+        'project.zip';
+      a.click();
+      window.URL.revokeObjectURL(url);
 
-        this.messageService.add({
-          severity: 'success',
-          summary: 'Projeto gerado',
-          detail: 'O arquivo ZIP foi baixado com sucesso!',
-        });
+      this.messageService.add({
+        severity: 'success',
+        summary: 'Project Generated',
+        detail: 'ZIP file downloaded successfully!',
+      });
       },
       error: (err) => {
-        console.error(err);
-        this.messageService.add({
-          severity: 'error',
-          summary: 'Erro ao gerar',
-          detail: 'Houve um problema ao gerar o projeto.',
-        });
+      console.error(err);
+      this.messageService.add({
+        severity: 'error',
+        summary: 'Generation Error',
+        detail: 'There was a problem generating the project.',
+      });
       },
     });
   }
