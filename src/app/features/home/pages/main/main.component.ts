@@ -59,7 +59,6 @@ export class MainComponent {
         'project.zip';
       a.click();
       window.URL.revokeObjectURL(url);
-
       this.messageService.add({
         severity: 'success',
         summary: 'Project Generated',
@@ -67,7 +66,6 @@ export class MainComponent {
       });
       },
       error: (err) => {
-      console.error(err);
       this.messageService.add({
         severity: 'error',
         summary: 'Generation Error',
