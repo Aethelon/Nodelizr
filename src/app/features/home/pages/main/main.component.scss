@@ -1,18 +1,35 @@
 main {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  padding: 2.5rem 0;
+  align-items:flex-start;
+  padding: 3.5rem 0 2rem 0;
   width: 100%;
 
+    .title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+
+    span {
+      color: var(--secondary-color);
+    }
+  }
+  
   @media (max-width: 768px) {
     flex-direction: column;
   }
 
   .section {
-    flex: 1;
     width: 100%;
-    height: auto;
-    margin: 0.2rem 0.3rem;
+  }
+
+  .metadata-section {
+    flex: 1;
+  }
+
+  .dependencies-section {
+    flex: 1.5;
   }
 }
+
+

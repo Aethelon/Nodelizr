@@ -6,7 +6,11 @@
         <p-inputGroupAddon>
           <i class="pi pi-file"></i>
         </p-inputGroupAddon>
-        <input pInputText type="text" formControlName="description" placeholder="Name"
+        <input
+          pInputText
+          type="text"
+          formControlName="description"
+          placeholder="Name"
         />
       </p-inputGroup>
 
@@ -35,6 +39,12 @@
       </p-inputGroup>
     </div>
   </form>
+  <button
+    pButton
+    type="button"
+    label="Generate"
+    (click)="generate.emit()"
+  >Generate</button>
 
   <app-project-tree class="project-tree" />
 </section>
