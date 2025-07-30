@@ -12,12 +12,11 @@
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 2rem;
-    align-items: stretch;
+    align-items: flex-start;
   }
 
   .section {
     flex: 1;
-    height: 100%;
 
     h2 {
       font-size: 1.25rem;

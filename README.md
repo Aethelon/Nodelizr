@@ -1,59 +1,181 @@
-# NodelizrAPP
+<div align="center">
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+<img src="./public/favicon.svg" alt="Nodelizr Banner" width="180">
 
-## Development server
+# Nodelizr
 
-To start a local development server, run:
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+[![Issues](https://img.shields.io/github/issues/Aethelon/Nodelizr-APP)](https://github.com/Aethelon/Nodelizr-APP/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/Aethelon/Nodelizr-APP)](https://github.com/Aethelon/Nodelizr-APP/commits/main)
+[![Vercel Deploy](https://vercelbadge.vercel.app/api/brunoliratm/Nodelizr-API)](https://nodelizr-api.vercel.app)
 
-```bash
-ng serve
-```
+</div>
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+> **NodelizrAPP** is an open-source tool to instantly generate modern, ready-to-use Node.js project boilerplates with curated dependencies. Save time, standardize your stack, and start building faster.
 
-## Code scaffolding
+</br>
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🌐 Access Online
 
-```bash
-ng generate component component-name
-```
+You can use Nodelizr directly in your browser, no installation required:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+👉 **[nodelizr.vercel.app](https://nodelizr.vercel.app)**
 
-```bash
-ng generate --help
-```
+</br>
 
-## Building
+## 📖 Table of Contents
 
-To build the project run:
+- [Features](#-features)
+- [Visuals](#-visuals)
+- [Quickstart](#-quickstart)
+- [Usage](#-usage)
+- [Roadmap](#-roadmap)
+- [FAQ](#-faq)
+- [Support](#-support)
+- [Contributing](#-contributing)
+- [Resources](#-resources)
+- [Authors & Acknowledgments](#-authors--acknowledgments)
+- [License](#-license)
+- [Project Status](#-project-status)
+- [Show your support](#-show-your-support)
 
-```bash
-ng build
-```
+</br>
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 🚀 Features
 
-## Running unit tests
+- **Instant Node.js project generation**
+- **Curated dependency selection** (choose your stack)
+- **Modern, clean UI**
+- **Download as ready-to-run ZIP**
+- **Open source & community-driven**
+- **Preview project structure before download**
+- **Easy metadata input (name, author, version, etc.)**
+- **Responsive design**
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+</br>
 
-```bash
-ng test
-```
+## 📸 Visuals
 
-## Running end-to-end tests
+<details>
+<summary>Desktop</summary>
 
-For end-to-end (e2e) testing, run:
+![Nodelizr Screenshot](./public/desktop.png)
 
-```bash
-ng e2e
-```
+</details>
+<details>
+<summary>Mobile</summary>
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+![Nodelizr Screenshot](./public/mobile.png)
 
-## Additional Resources
+</details>
+<details>
+<summary>Tablet</summary>
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![Nodelizr Screenshot](./public/tablet.png)
+
+</details>
+</br>
+
+## ⚡ Quickstart
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Aethelon/Nodelizr-APP.git
+   cd Nodelizr-APP
+   ```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+3. **Start the development server**
+   ```bash
+   ng serve
+   ```
+4. Open [http://localhost:4200](http://localhost:4200) in your browser.
+
+</br>
+
+## 🛠️ Usage
+
+1. **Fill in project metadata** (name, author, version)
+2. **Select dependencies** from curated categories
+3. **Preview project structure**
+4. **Generate & download** your custom Node.js boilerplate as a ZIP
+
+</br>
+
+## 🗺️ Roadmap
+
+- [ ] Add more dependency categories
+- [ ] Support for custom templates
+- [ ] Multi-language support
+- [ ] Community-driven dependency suggestions
+
+</br>
+
+## ❓ FAQ
+
+**Q: What is Nodelizr?**
+A: An open-source tool to generate Node.js project boilerplates with curated dependencies.
+
+**Q: Can I suggest new dependencies?**
+A: Yes! Open an issue or pull request.
+
+**Q: Is it free?**
+A: 100% free and open source under the MIT License.
+
+</br>
+
+## 💬 Support
+
+- [Open an issue](https://github.com/Aethelon/Nodelizr-APP/issues)
+- [Discussions](https://github.com/Aethelon/Nodelizr-APP/discussions)
+- Contact the authors
+  - [Bruno Magno](https://github.com/brunoliratm)
+  - [Paulo de Araujo](https://github.com/Paulo-Araujo-Jr)
+
+</br>
+
+## 🤝 Contributing
+
+Contributions are welcome! To get started:
+
+1. Fork this repo
+2. Create a new branch (`git checkout -b feature/your-feature`)
+3. Commit your changes
+4. Open a Pull Request
+
+For major changes, please open an issue first to discuss what you’d like to change.
+
+</br>
+
+## 📚 Resources
+
+- [API Repository](https://github.com/Aethelon/Nodelizr-API)
+- [Angular CLI Docs](https://angular.dev/tools/cli)
+- [PrimeNG Docs](https://primeng.org/)
+
+</br>
+
+## 👤 Authors & Acknowledgments
+
+- [Bruno Magno](https://github.com/brunoliratm)
+- [Paulo de Araújo](https://github.com/Paulo-Araujo-Jr)
+
+</br>
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+</br>
+
+## 📈 Project Status
+
+NodelizrAPP is actively maintained. Feedback, issues, and feature requests are welcome!
+
+</br>
+
+## ⭐️ Show your support
+
+If you like this project, please star the repo and share it with your friends!

@@ -1,26 +1,26 @@
 @import "primeicons/primeicons.css";
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&display=swap");
 
 :root {
-  // Color Variables
-  --bg-color: #3D3737; //Dark Brown
-  --text-color: #EFE6DE; //Cream Vanilla
-  --text-color-fixed: #EFE6DE; // Cream Vanilla Fixed
-  --primary-color: #2D322D; //Dark Green
-  --secondary-color: #3BAC53; //Green
+  --bg-color: #3d3737; //Dark Brown
+  --text-color: #efe6de; //Cream Vanilla
+  --text-color-fixed: #efe6de; // Cream Vanilla Fixed
+  --primary-color: #2d322d; //Dark Green
+  --primary-color-fixed: #2d322d; //Dark Green
+  --secondary-color: #3bac53; //Green
+  --toast-error: #e74c3c; // Error Red
+  --toast-warn: #fbbf24; // Warning Yellow
 
-  // Font Variables
-  --font-family: 'Inter', sans-serif, Helvetica;
+  --font-family: "Inter", sans-serif, Helvetica;
 
-  // Size Variables
   --default-radius: 16px;
 }
 
 [data-theme="light"] {
-  --bg-color: #EFE6DE; // Cream Vanilla
-  --text-color: #3D3737; // Dark Brown
-  --primary-color: #FFFFFF; // White
-  --secondary-color: #3BAC53; // Green
+  --bg-color: #efe6de; // Cream Vanilla
+  --text-color: #3d3737; // Dark Brown
+  --primary-color: #ffffff; // White
+  --secondary-color: #3bac53; // Green
 }
 
 * {
@@ -34,4 +34,48 @@ body {
   padding: 1em 2em !important;
   font-family: var(--font-family);
   color: var(--text-color);
+}
+
+.p-toast {
+  z-index: 9999 !important;
+}
+
+.p-toast .p-toast-message {
+  padding: 1rem 1.5rem;
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  border-radius: var(--default-radius);
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.18);
+  border: none;
+  font-family: var(--font-family);
+  backdrop-filter: blur(2px);
+}
+
+.p-toast .p-toast-message .p-toast-message-content {
+  align-items: center;
+}
+
+.p-toast .p-toast-message-success {
+  border-left: 6px solid var(--secondary-color);
+}
+.p-toast .p-toast-message-error {
+  border-left: 6px solid var(--toast-error);
+}
+.p-toast .p-toast-message-warn {
+  border-left: 6px solid var(--toast-warn);
+}
+
+.p-toast .p-toast-message .p-toast-message-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.p-toast .p-toast-message .p-toast-summary {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.p-toast .p-toast-message .p-toast-detail {
+  font-size: 1rem;
+  opacity: 0.95;
 }
