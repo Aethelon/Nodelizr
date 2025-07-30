@@ -1,3 +1,9 @@
-<p>
-  main works!
-</p>
+<p-toast position="top-center"></p-toast>
+<main>
+  <app-metadata-section
+    class="section metadata-section"
+    [filterForm]="filterForm"
+    (generate)="onGenerate()"
+  />
+  <app-dependencies-section class="section dependencies-section" [filterForm]="filterForm" />
+</main>
