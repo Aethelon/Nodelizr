@@ -5,13 +5,13 @@
 # Nodelizr
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
-[![Issues](https://img.shields.io/github/issues/Aethelon/Nodelizr-APP)](https://github.com/Aethelon/Nodelizr-APP/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/Aethelon/Nodelizr-APP)](https://github.com/Aethelon/Nodelizr-APP/commits/main)
-[![Vercel Deploy](https://vercelbadge.vercel.app/api/brunoliratm/Nodelizr-API)](https://nodelizr-api.vercel.app)
+[![Issues](https://img.shields.io/github/issues/Aethelon/Nodelizr)](https://github.com/Aethelon/Nodelizr/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/Aethelon/Nodelizr)](https://github.com/Aethelon/Nodelizr/commits/main)
+[![Vercel Deploy](https://vercelbadge.vercel.app/api/brunoliratm/Nodelizr)](https://nodelizr-api.vercel.app)
 
 </div>
 
-> **NodelizrAPP** is an open-source tool to instantly generate modern, ready-to-use Node.js project boilerplates with curated dependencies. Save time, standardize your stack, and start building faster.
+> **Nodelizr** is an open-source tool to instantly generate modern, ready-to-use Node.js project boilerplates with curated dependencies. Save time, standardize your stack, and start building faster.
 
 </br>
 
@@ -80,8 +80,8 @@ You can use Nodelizr directly in your browser, no installation required:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Aethelon/Nodelizr-APP.git
-   cd Nodelizr-APP
+   git clone https://github.com/Aethelon/Nodelizr.git
+   cd Nodelizr
    ```
 2. **Install dependencies**
    ```bash
@@ -128,8 +128,8 @@ A: 100% free and open source under the MIT License.
 
 ## 💬 Support
 
-- [Open an issue](https://github.com/Aethelon/Nodelizr-APP/issues)
-- [Discussions](https://github.com/Aethelon/Nodelizr-APP/discussions)
+- [Open an issue](https://github.com/Aethelon/Nodelizr/issues)
+- [Discussions](https://github.com/Aethelon/Nodelizr/discussions)
 - Contact the authors
   - [Bruno Magno](https://github.com/brunoliratm)
   - [Paulo de Araujo](https://github.com/Paulo-Araujo-Jr)
@@ -152,8 +152,6 @@ For major changes, please open an issue first to discuss what you’d like to ch
 ## 📚 Resources
 
 - [API Repository](https://github.com/Aethelon/Nodelizr-API)
-- [Angular CLI Docs](https://angular.dev/tools/cli)
-- [PrimeNG Docs](https://primeng.org/)
 
 </br>
 
