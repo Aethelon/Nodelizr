@@ -34,4 +34,13 @@ export const defaultTreeData: TreeNode[] = [
     label: '.gitignore',
     icon: 'pi pi-file',
   },
+  {
+    key: '5',
+    label: 'LICENSE',
+    icon: 'pi pi-file',
+  },
+  {  key: '6',
+    label: '.env.example',
+    icon: 'pi pi-file',
+  },
 ];

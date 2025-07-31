@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, FormsModule } from '@angular/forms';
+import { LibrariesService, Library } from '@core/services/libraries.service';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
-import { Library, LibrariesService } from '@core/services/libraries.service';
 
 @Component({
   selector: 'app-dependencies-section',
   standalone: true,
-  imports: [CommonModule, ButtonModule, DialogModule],
+  imports: [CommonModule, ButtonModule, DialogModule, FormsModule],
   templateUrl: './dependencies-section.component.html',
   styleUrls: ['./dependencies-section.component.scss'],
 })
@@ -17,6 +17,8 @@ export class DependenciesSectionComponent implements OnInit {
 
   libraries: Library[] = [];
   grouped: Record<string, Library[]> = {};
+  search = '';
+  filteredGrouped: Record<string, Library[]> = {};
 
   get librariesForm(): FormArray {
     return this.filterForm.get('libraries') as FormArray;
@@ -32,13 +34,33 @@ export class DependenciesSectionComponent implements OnInit {
         acc[lib.category].push(lib);
         return acc;
       }, {} as Record<string, Library[]>);
+      this.filteredGrouped = { ...this.grouped };
     });
   }
 
-  get categories(): string[] {
-    return Object.keys(this.grouped);
+  onSearch() {
+    const term = this.search.trim().toLowerCase();
+    if (!term) {
+      this.filteredGrouped = { ...this.grouped };
+      return;
+    }
+    this.filteredGrouped = {};
+    for (const category of Object.keys(this.grouped)) {
+      const filtered = this.grouped[category].filter(
+        (lib) =>
+          lib.name.toLowerCase().includes(term) ||
+          (lib.description && lib.description.toLowerCase().includes(term))
+      );
+      if (filtered.length) {
+        this.filteredGrouped[category] = filtered;
+      }
+    }
   }
-  
+
+  get categories(): string[] {
+    return Object.keys(this.filteredGrouped);
+  }
+
   isSelected(lib: Library): boolean {
     return this.librariesForm.value.some((l: any) => l.name === lib.name);
   }

@@ -1,6 +1,13 @@
 <section class="dependencies-section">
   <div class="header">
     <h2>Dependencies</h2>
+    <input
+      type="text"
+      class="search-input"
+      placeholder="Search dependency..."
+      [(ngModel)]="search"
+      (ngModelChange)="onSearch()"
+    />
   </div>
 
   <div class="dependencies-list">
@@ -8,14 +15,17 @@
       <h3>{{ category }}</h3>
       <ul>
         <li
-          *ngFor="let lib of grouped[category]"
+          *ngFor="let lib of filteredGrouped[category]"
           (click)="toggle(lib)"
           [class.selected]="isSelected(lib)"
         >
           <span class="lib-name">{{ lib.name }}</span>
           <small>{{ lib.description }}</small>
           <span class="version">{{ lib.version }}</span>
-          <i class="pi" [ngClass]="isSelected(lib) ? 'pi-check-circle' : 'pi-circle-off'"></i>
+          <i
+            class="pi"
+            [ngClass]="isSelected(lib) ? 'pi-check-circle' : 'pi-circle-off'"
+          ></i>
         </li>
       </ul>
     </ng-container>
