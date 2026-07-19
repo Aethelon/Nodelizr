@@ -1,0 +1,42 @@
+export const siteConfig = {
+  name: "Nodelizr",
+  title: "Nodelizr — Generate Node.js Projects Instantly",
+  description:
+    "Nodelizr is a free, open-source Node.js project generator. Scaffold Express, Fastify, CLI and worker boilerplates with curated dependencies, preview the folder structure, and download a ready-to-run ZIP in seconds — no CLI required.",
+  url: (
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://nodelizr.vercel.app"
+  ).replace(/\/$/, ""),
+  locale: "en_US",
+  themeColor: "#0f0f0f",
+  accentColor: "#5fa04e",
+  creator: "Aethelon",
+  repo: "https://github.com/Aethelon/Nodelizr-APP",
+  keywords: [
+    "Nodelizr",
+    "Node.js project generator",
+    "Node.js boilerplate",
+    "Node.js starter",
+    "Node initializr",
+    "npm package generator",
+    "package.json generator",
+    "Express boilerplate",
+    "Express API generator",
+    "Fastify boilerplate",
+    "TypeScript Node starter",
+    "CLI tool boilerplate",
+    "worker scheduler template",
+    "scaffold Node project",
+    "generate Node.js app",
+    "backend boilerplate generator",
+    "project structure generator",
+    "download Node.js starter zip",
+    "open source project generator",
+    "Node.js dependencies picker",
+    "Spring Initializr for Node",
+    "Aethelon",
+  ],
+  authors: [
+    { name: "Bruno Magno de Lira Gomes", url: "https://github.com/brunoliratm" },
+    { name: "Paulo de Araujo", url: "https://github.com/Paulo-Araujo-Jr" },
+  ],
+} as const;
