@@ -90,7 +90,7 @@ export function DependenciesDialog({
         ))}
         </CommandList>
         <div className="mt-1 border-t border-border px-3 py-2 text-xs text-muted-foreground">
-          Selecting keeps the dialog open — add multiple, then press{" "}
+          Selecting keeps the dialog open. Add multiple, then press{" "}
           <kbd className="rounded border border-border bg-muted px-1">Esc</kbd>{" "}
           to close.
         </div>

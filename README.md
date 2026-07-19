@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nodelizr
 
-## Getting Started
+Nodelizr is a free, open-source Node.js project generator. It lets you scaffold Express, Fastify, CLI and worker boilerplates with curated dependencies, preview the exact folder structure, and download a ready-to-run ZIP in seconds, without using a CLI.
 
-First, run the development server:
+Live application: https://nodelizr.vercel.app
+
+## Overview
+
+The interface is organized around a collapsible sidebar with three sections:
+
+- **Home**: configure project metadata (name, version, author, license) and manage selected dependencies.
+- **Templates**: choose a preset (SaaS API, Public API, Microservice Events, CLI Automation, Scheduler/Worker, Web Scraping) or start from a custom setup. Each preset bundles a folder structure with a recommended set of dependencies.
+- **Structure**: preview the files and their contents before generating the project.
+
+Dependencies are added through a searchable command palette (`Ctrl/Cmd + B`), and a persistent action bar generates and downloads the project as a `.zip`.
+
+## Tech stack
+
+- Next.js 16 (App Router) and React 19
+- TypeScript
+- Tailwind CSS 4, shadcn/ui (base-ui) and lucide-react
+- Zustand for cross-page state and sonner for notifications
+
+The frontend consumes the Nodelizr API (https://github.com/Aethelon/Nodelizr-API), which provides the available options and libraries and builds the project archive.
+
+## Getting started
+
+Prerequisites: Node.js 20.9 or later.
 
 ```bash
+# Install dependencies
+npm install
+
+# Start the development server (http://localhost:3000)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Create and serve a production build
+npm run build
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Variable | Default | Description |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | `https://nodelizr.vercel.app` | Public base URL used for canonical links, Open Graph metadata, the sitemap and robots. |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The API base URL is resolved automatically: on `localhost` it targets `http://localhost:3000/api`, otherwise `https://nodelizr-api.vercel.app/api` (see `src/lib/api.ts`). If the API is unreachable, the application falls back to bundled default data.
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+  app/
+    layout.tsx            Root layout, fonts, SEO metadata and JSON-LD
+    page.tsx              Home page (metadata form and dependencies)
+    templates/            Presets and templates page
+    structure/            File-tree preview page
+    opengraph-image.tsx   Dynamic Open Graph / Twitter image
+    sitemap.ts            Sitemap
+    robots.ts             Robots rules
+    manifest.ts           Web app manifest
+    globals.css           Design tokens (dark theme) and scrollbar styles
+  components/
+    layout/               Sidebar, application shell and generate bar
+    home/                 Metadata form, dependency panel and dialog
+    ui/                   shadcn/ui components
+  store/                  Zustand stores (project and UI state)
+  lib/                    API client, types, default data and site config
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Script | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | Run ESLint |
 
-## Deploy on Vercel
+## Authors
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Developed by Aethelon (https://github.com/Aethelon): Bruno Magno (https://github.com/brunoliratm) and Paulo de Araújo (https://github.com/Paulo-Araujo-Jr).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+Released under the [MIT](LICENSE) license.

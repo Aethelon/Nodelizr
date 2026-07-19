@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Nodelizr",
-  title: "Nodelizr — Generate Node.js Projects Instantly",
+  title: "Nodelizr: Generate Node.js Projects Instantly",
   description:
-    "Nodelizr is a free, open-source Node.js project generator. Scaffold Express, Fastify, CLI and worker boilerplates with curated dependencies, preview the folder structure, and download a ready-to-run ZIP in seconds — no CLI required.",
+    "Nodelizr is a free, open-source Node.js project generator. Scaffold Express, Fastify, CLI and worker boilerplates with curated dependencies, preview the folder structure, and download a ready-to-run ZIP in seconds, with no CLI required.",
   url: (
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://nodelizr.vercel.app"
   ).replace(/\/$/, ""),

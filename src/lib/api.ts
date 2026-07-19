@@ -7,7 +7,7 @@ import type {
 } from "./types";
 
 const REMOTE_API_URL = "https://nodelizr-api.vercel.app/api";
-const LOCAL_API_URL = "https://nodelizr-api.vercel.app/api";
+const LOCAL_API_URL = "http://localhost:3000/api";
 
 function isLocalhost(): boolean {
   return (

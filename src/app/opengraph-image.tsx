@@ -68,7 +68,7 @@ export default function OpengraphImage() {
           }}
         >
           Scaffold Express, Fastify, CLI &amp; worker boilerplates with curated
-          dependencies — download a ready-to-run ZIP in seconds.
+          dependencies, then download a ready-to-run ZIP in seconds.
         </div>
 
         <div
