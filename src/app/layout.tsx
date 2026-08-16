@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   publisher: siteConfig.creator,
   category: "technology",
   verification: {
-    google: "9JjNsIHWlJx9cO6VwjBIQc2WiMAyDsdGFMdGAPc659M",
+    google: "XOfnfqq5Zq12X45qXUQNr8DSEmqNK8_OEpWfZzecpx0",
   },
   alternates: {
     canonical: "/",
